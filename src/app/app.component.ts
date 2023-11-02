@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 
+export interface Role {
+  role: string,
+  text: string
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,7 +17,7 @@ export class AppComponent {
     'list two',
     'list three'
   ];
-  roles: any[] = [
+  roles: Role[] = [
     {
       role: 'admin',
       text: 'ADMIN'
@@ -28,8 +32,11 @@ export class AppComponent {
     }
   ];
 
-
   show() {
     console.log('isParagraphVisible', this.isParagraphVisible);
+  }
+
+  getColor(user: Role): string {
+    return user.role == 'admin' ? 'green' : user.role === 'user' ? 'blue' : 'red';
   }
 }

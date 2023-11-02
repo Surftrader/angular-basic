@@ -14,11 +14,28 @@
 </ul>
 <ng-container *ngFor="let user of roles; index as idx">
   <div [ngSwitch]="user.role">
-    <div *ngSwitchCase="'admin'">{{idx + 1}}. Hi, you have entered as admin
+    <div *ngSwitchCase="'admin'">{{idx + 1}}.
+      Hi,
+      you have entered as admin
       ({{user.text}})</div>
     <div *ngSwitchCase="'user'">{{idx + 1}}. Hi, you have entered as user
       ({{user.text}})</div>
     <div *ngSwitchCase="'customer'">{{idx + 1}}. Hi, you have entered as
       customer ({{user.text}})</div>
+  </div>
+</ng-container>
+
+<ng-container *ngFor="let user of roles; index as idx">
+  <div
+    [ngStyle]="{'color': user.role == 'admin' ? 'green' : user.role === 'user' ?
+    'blue' : 'red'}">
+    {{ idx + 1}}. Hi!
+  </div>
+</ng-container>
+
+<ng-container *ngFor="let user of roles; index as idx">
+  <div
+    [ngStyle]="{'color': getColor(user)}">
+    {{ idx + 1}}. Hi!
   </div>
 </ng-container>
