@@ -1,1 +1,8 @@
-<h1>Hello World ({{title}})</h1>
+<h1 (click)="isParagraphVisible=!isParagraphVisible; show();">Hello World
+  ({{title}}) click me</h1>
+<p *ngIf="isParagraphVisible">Lorem ipsum dolor sit amet consectetur adipisicing
+  elit. Aperiam esse ex nisi
+  inventore iure. Laboriosam iusto nam quia sit unde officiis mollitia natus
+  porro? Ipsa amet, culpa animi, sit dignissimos libero impedit iusto
+  consectetur aperiam laborum porro est, minus ab excepturi dolores. Assumenda
+  sed totam fugit deserunt pariatur, et nulla!</p>

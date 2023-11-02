@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-basic';
+  isParagraphVisible: boolean = false;
+
+  show() {
+    console.log('isParagraphVisible', this.isParagraphVisible);
+  }
 }
