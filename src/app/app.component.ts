@@ -39,4 +39,8 @@ export class AppComponent {
   getColor(user: Role): string {
     return user.role == 'admin' ? 'green' : user.role === 'user' ? 'blue' : 'red';
   }
+
+  getDate() {
+    return new Date();
+  }
 }

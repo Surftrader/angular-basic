@@ -40,3 +40,15 @@
     {{ idx + 1}}. Hi!
   </div>
 </ng-container>
+
+<h1>Hello with pipe ({{title | uppercase}})</h1>
+<h1>Hello with pipe ({{title | titlecase}})</h1>
+<h1>Hello with pipe ({{title | lowercase}})</h1>
+<h1>Date with pipe ({{getDate() | date:'short'}})</h1>
+<h1>Date with pipe ({{getDate() | date:'medium'}})</h1>
+<h1>Date with pipe ({{getDate() | date:'dd MMMM YYYY'}})</h1>
+<h1>Date with pipe ({{getDate()}})</h1>
+
+<h1>Number with pipe ({{ 0.82 | percent}})</h1>
+<h1>Number with pipe ({{ 10.82 | currency}})</h1>
+<h1>Number with pipe ({{ 10.82 | currency:'UAH'}})</h1>
