@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-basic';
-  isParagraphVisible: boolean = false;
+  isParagraphVisible: boolean = true;
+  list: string[] = [
+    'list one',
+    'list two',
+    'list three'
+  ];
 
   show() {
     console.log('isParagraphVisible', this.isParagraphVisible);
