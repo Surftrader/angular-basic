@@ -13,6 +13,21 @@ export class AppComponent {
     'list two',
     'list three'
   ];
+  roles: any[] = [
+    {
+      role: 'admin',
+      text: 'ADMIN'
+    },
+    {
+      role: 'user',
+      text: 'USER'
+    },
+    {
+      role: 'customer',
+      text: 'CUSTOMER'
+    }
+  ];
+
 
   show() {
     console.log('isParagraphVisible', this.isParagraphVisible);

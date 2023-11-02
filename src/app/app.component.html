@@ -12,3 +12,13 @@
     {{item + ' with id ' + id}}
   </li>
 </ul>
+<ng-container *ngFor="let user of roles; index as idx">
+  <div [ngSwitch]="user.role">
+    <div *ngSwitchCase="'admin'">{{idx + 1}}. Hi, you have entered as admin
+      ({{user.text}})</div>
+    <div *ngSwitchCase="'user'">{{idx + 1}}. Hi, you have entered as user
+      ({{user.text}})</div>
+    <div *ngSwitchCase="'customer'">{{idx + 1}}. Hi, you have entered as
+      customer ({{user.text}})</div>
+  </div>
+</ng-container>
